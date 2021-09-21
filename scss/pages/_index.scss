@@ -1,0 +1,129 @@
+.home {
+    height: 100%;
+    color: #fff;
+    padding-top: 20vh;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    background: 
+        linear-gradient(
+            to right, 
+            rgba($primary-color, 0.4),
+            rgba($primary-color, 0.1)
+            ),
+        url('../img/bg.jpg') center top;
+    background-size: cover;
+
+    &_name {
+        font-size: 3rem;
+        margin-bottom: 0;
+        // padding-bottom: .25rem;
+        margin-top: 1rem;
+        border-bottom: 2px solid $accent-color;
+        color: $accent-color;
+
+        &--last {
+            color: $accent-color;
+        }
+    }
+}
+
+.top-left-menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.alpine {
+    cursor: pointer;
+    border: 2px solid rgb(192, 131, 113);
+    background: rgb(160, 90, 69);
+    padding: 1px 5px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.178);
+}
+
+.alpine:hover {
+    background: rgb(192, 131, 113);
+}
+
+.main {
+    @include flexCenter(row);
+    color: $text-color;
+    width: 80% - 5%;
+    margin: 50px auto 0px;
+
+    @include mobile{
+        flex-direction: column !important;
+    }
+    
+    #{&}_paragraph_one {
+        // font-weight: map-get($font-weights, bold );
+        font-weight: weight(regular);
+        cursor: pointer;
+        
+        &:hover {
+            color:rgb(184, 99, 113);
+        }
+    }
+
+    #{&}_paragraph_two {
+        @extend .main_paragraph_one;
+        border-bottom: 1px solid white;
+    }
+}
+
+.light {
+    @include theme($light-theme: true);
+}
+
+// 'sm': '640px',
+@media only screen and (min-width: 640px) {
+    body {
+        border: $media-border solid red;
+    }
+}
+
+// 'md': '768px',
+@media only screen and (min-width: 768px) {
+    body {
+        border: $media-border solid green;
+    }
+
+    .home {
+        &_name {
+            font-size: 4rem;
+        }
+    }
+}
+
+// 'lg': '1024px',
+@media only screen and (min-width: 1024px) {
+    body {
+        border: $media-border solid blue;
+    }
+
+    .home {
+        padding-top: 30vh;
+        &_name {
+            font-size: 5rem;
+        }
+    }
+}
+
+//'xl': '1280px',
+@media only screen and (min-width: 1280px) {
+    body {
+        border: $media-border solid yellow;
+    }
+}
+
+// '2xl': '1536px',
+@media only screen and (min-width: 1536px) {
+    body {
+        border: $media-border solid magenta;
+    }
+    .home {
+        padding-top: 35vh;
+    }
+}
+

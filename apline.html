@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon/alpine/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/main.css">
+    <script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script>
+    <title>Alpine 3</title>
+</head>
+<body class="alpine-body">
+    <template id="crisis">
+        <h1>Hello From the crisis banner</h1>
+    </template>
+    <div class="body">
+        <div class="body-col-left">
+            <div class="top-links">
+                <div class="top-links-item">
+                    <div class="top-links-item-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                          </svg>
+                    </div>
+                    <div class="top-links-item-text">Stuart John Marsh</div>
+                </div>
+                <div class="top-links-item">
+                    <div class="top-links-item-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
+                          </svg>
+                    </div>
+                    <div class="top-links-item-text">Friends</div>
+                </div>
+                <div class="top-links-item">Marketplace</div>
+                <div class="top-links-item">Groups</div>
+                <div class="top-links-item">Watch</div>
+                <div class="top-links-item">See More</div>
+                    <hr width="100%">
+
+            </div>
+            <div class="bot-links">
+                <div class="bot-links-item">
+                    <div class="top-links-item-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                          </svg>
+                    </div>
+                    <div class="top-links-item-text">Villian of Dirt</div>
+                </div>
+                <div class="bot-links-item">
+                    <div class="top-links-item-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                          </svg>
+                    </div>
+                    <div class="top-links-item-text">Political Page</div>
+                </div>
+                <div class="bot-links-item">
+                    <div class="top-links-item-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                          </svg>
+                    </div>
+                    <div class="top-links-item-text">Animation Page</div>
+                </div>
+            </div>
+        </div>
+        <div class="body-col-center">
+            <!-- A POST -->
+            <div class="body-col-center-section" x-data="{ count: 0, likes: 0, comments: 0, shares: 0 }">
+                <div class="body-col-center-section-name">
+                    <div class="body-col-center-section-name-left">
+                        <div class="body-col-center-section-name-left-avatar"></div>
+                        <div>
+                            <div class="body-col-center-section-name-left-name">Name</div>
+                            <div class="body-col-center-section-name-left-time">Time</div>
+                        </div>
+                    </div>
+                    <div class="body-col-center-section-name-mm">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="meat-ball" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                          </svg>
+                    </div>
+                </div>
+                <div class="body-col-center-section-content"></div>
+                <div>Description</div>
+                <div class="body-col-center-section-metrics">
+                    <div class="body-col-center-section-metrics-left">
+                        <div x-show="likes > 0" class="body-col-center-section-metrics-left-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" />
+                            </svg>
+                        </div>
+                        <span  x-show="likes > 1" x-text="likes"></span>
+                    </div>
+                    <div class="body-col-center-section-metrics-right">
+                        <div x-show="comments >= 1" >
+                            <span x-text="comments"></span>
+                            <span x-show="comments == 1">Comment</span>
+                            <span x-show="comments > 1">Comments</span>
+                        </div>
+                        <div x-show="shares >= 1" >
+                            <span x-text="shares"></span>
+                            <span x-show="shares == 1">Share</span>
+                            <span x-show="shares > 1">Shares</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="body-col-center-section-buttons">
+                    <button x-on:click="likes++">  
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                        </svg>
+                        Like
+                    </button>
+                    <button x-on:click="comments++">  
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                          </svg>
+                        Comment
+                    </button>
+                    <button x-on:click="shares++">  
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                          </svg>
+                        Share
+                    </button>
+                </div>
+                <div class="body-col-center-section-comments">Comments</div>
+                
+                    
+
+            </div>
+        </div>
+        <div class="body-col-right">
+            <div class="body-col-right-sponsored">
+                Sponsored
+                <hr class="rule">
+            </div>
+            <div class="body-col-right-pages">
+                Your Pages
+                <hr class="rule">
+            </div>
+            <div class="body-col-right-contacts">
+                Contacts
+                <hr class="rule">
+            </div>
+        </div>
+    </div>
+    <!-- MESSEAGE BUBBLES -->
+    <div class="bubble">
+        <div class="bubble-item"></div>
+        <div class="bubble-item"></div>
+        <div class="bubble-item">
+              <svg xmlns="http://www.w3.org/2000/svg" class="bubble-item-compose" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" />
+              </svg>
+        </div>
+    </div>
+</body>
+<script src="./js/alpine.js"></script>
+<script src="./js/crisis.js"></script>
+<script src="./js/components/header.js"></script>
+</html>

@@ -1,0 +1,195 @@
+.alpine-header {
+    background: $medium-gray;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #585858;
+    padding: 0px 7px 0 16px;
+    align-items: center;
+    height: 63px;
+
+    &-search {
+        display: flex;
+    }
+
+    &-links {
+
+        display: none;
+
+
+        &-link {
+            padding-bottom: 5px;
+
+            &-button {
+                width: 90px;
+                height: 45px;
+                padding-top: 1px;
+                border-radius: 7px;
+                
+            }
+            &-button:hover {
+                background: rgb(93, 93, 94);
+            }
+        }
+
+        &-link svg {
+            color: $icon-gray;
+            display: block;
+            margin: 6px auto 0;
+        }
+
+    }
+
+    &-profile {
+        display: flex;
+
+        &-account {
+            display: flex;
+            align-items: center;
+
+            &-avatar {
+                width: 40px;
+                margin-right: 5px;;
+                height: 40px;
+                border-radius: 50%;
+                background:rgb(93, 93, 94)
+            }
+            &-name {
+                margin-right: 5px;
+                font-size: .9rem;
+            }
+        }
+        &-item {
+            width: 40px;
+            height: 40px;
+            padding: 9px;
+            border-radius: 50%;
+            margin-right: 8px;
+            background: rgb(93, 93, 94);
+        }
+
+        &-item:hover, &-account-avatar:hover {
+            background: rgb(126, 126, 126);
+        }
+    }
+}
+
+.search {
+    display: none;
+
+    &-icon {
+    width: 40px;
+    padding: 10px;
+    height: 40px;
+    border-radius: 20px 0 0 20px;
+    background: #57595a;
+    overflow: hidden;
+
+        &-svg {
+            padding: 3px;
+            margin-top: -3px;
+            color: $icon-gray;
+        }
+    }
+    &-input {
+        background: #57595a;
+        border-radius: 0 20px 20px 0;
+        height: 40px;
+        border: none;
+        outline: none;
+        color: $icon-gray;
+    }
+}
+
+.bento-box {
+    width: 20px;
+    margin: 1px;
+}
+
+::placeholder {
+    color: $icon-gray;
+}
+
+.back {
+    height: 40px;
+    width: 40px;
+    margin-right: 8px;
+    border-radius: 50%;
+    // add a background gradient from blue to light blue.
+    background: linear-gradient(to top, #0e5f74, rgb(93, 235, 235));
+}
+
+.mobile-search {
+    height: 40px;
+    width: 40px;
+    background:rgb(93, 93, 94);
+    border: none;
+    border-radius: 50%;
+    color: $icon-gray;
+    padding: 10px;
+    margin-left: -3px;
+}
+
+.back svg {
+    margin-left: -1px;
+    width: 40px;
+}
+
+// 'sm': '640px',
+@media only screen and (min-width: 640px) {
+}
+
+// 'md': '768px',
+@media only screen and (min-width: 768px) {
+    .alpine-header { 
+
+    
+        &-links {
+            display: flex;
+        }
+    }
+    
+    .search {
+        display: none;
+    
+        &-icon {
+        width: 40px;
+        padding: 10px;
+        height: 40px;
+        border-radius: 20px 0 0 20px;
+        background: #57595a;
+        overflow: hidden;
+    
+            &-svg {
+                padding: 3px;
+                margin-top: -3px;
+                color: $icon-gray;
+            }
+        }
+        &-input {
+            background: #57595a;
+            border-radius: 0 20px 20px 0;
+            height: 40px;
+            border: none;
+            outline: none;
+            color: #b0b3b8;
+        }
+    }
+}
+
+// 'lg': '1024px',
+@media only screen and (min-width: 1024px) {
+    .search {
+        display: flex;
+    }
+    .mobile-search {
+        display: none;
+    }
+}
+
+//'xl': '1280px',
+@media only screen and (min-width: 1280px) {
+}
+
+// '2xl': '1536px',
+@media only screen and (min-width: 1536px) {
+}

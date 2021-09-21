@@ -1,0 +1,81 @@
+@import './utils/normalize';
+@import './utils/config';
+@import './utils/variables';
+@import './utils/mixins';
+
+@import './pages/alpine/alp-main';
+@import './pages/alpine/alp-header';
+@import './pages/alpine/alp-left';
+@import './pages/alpine/alp-center';
+@import './pages/alpine/alp-right';
+@import './pages/alpine/alp-messages';
+
+@import './pages/index';
+@import './pages/about';
+@import './pages/menu';
+
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: $primary-color;
+    color: set-text-color($primary-color);
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1;
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    .social-icons {
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+
+        a {
+            padding: 0.4rem;
+            @include transition-ease;
+
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+}
+
+.text-secondary {
+    color: $accent-color;
+}
+
+footer {
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0.4rem;
+    right: 1rem;
+    text-align: right;
+    padding: 1rem;
+    color: $text-color;
+}

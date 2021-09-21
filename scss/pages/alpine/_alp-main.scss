@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+.alpine-body {
+    background: $dark-gray;
+    position: relative;
+}
+
+.body {
+    display: flex;
+}
+
+.active-tab {
+    border-bottom: 5px solid rgb(76, 207, 207);
+}
+
+// 'sm': '640px',
+@media only screen and (min-width: 640px) {
+
+}
+
+// 'md': '768px',
+@media only screen and (min-width: 768px) {
+}
+
+// 'lg': '1024px',
+@media only screen and (min-width: 1024px) {
+}
+
+//'xl': '1280px',
+@media only screen and (min-width: 1280px) {
+}
+
+// '2xl': '1536px',
+@media only screen and (min-width: 1536px) {
+}
