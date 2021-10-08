@@ -580,6 +580,10 @@ video {
   display: table;
 }
 
+.grid {
+  display: grid;
+}
+
 .w-full {
   width: 100%;
 }
