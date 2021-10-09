@@ -718,21 +718,12 @@ video {
   border-radius: 0.25rem;
 }
 
-.border-8 {
-  border-width: 8px;
-}
-
 .border {
   border-width: 1px;
 }
 
 .border-b {
   border-bottom-width: 1px;
-}
-
-.border-black {
-  --tw-border-opacity: 1;
-  border-color: rgba(0, 0, 0, var(--tw-border-opacity));
 }
 
 .border-gray-300 {
