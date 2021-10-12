@@ -597,6 +597,10 @@ video {
   margin: 1rem;
 }
 
+.m-12 {
+  margin: 3rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -634,8 +638,8 @@ video {
   height: 2rem;
 }
 
-.h-24 {
-  height: 6rem;
+.h-12 {
+  height: 3rem;
 }
 
 .w-5 {
@@ -646,8 +650,8 @@ video {
   width: 1.5rem;
 }
 
-.w-24 {
-  width: 6rem;
+.w-12 {
+  width: 3rem;
 }
 
 .w-64 {
